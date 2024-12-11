@@ -9,7 +9,7 @@ defmodule TodosWeb.TodoJSON do
     %{
       id: todo.id,
       title: todo.title,
-      done: todo.done,
+      done: todo.done
     }
   end
 
