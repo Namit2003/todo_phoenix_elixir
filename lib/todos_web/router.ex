@@ -10,6 +10,11 @@ defmodule TodosWeb.Router do
     get "/todos", TodoController, :index
     get "/todos/:id", TodoController, :show
     post "/todos", TodoController, :create
+    put "/todos/:id", TodoController, :update
+    delete "/todos/:id", TodoController, :delete
+
+    # is equivalent to:
+    resources "/todos", TodoController, except: [:new, :edit]
   end
 
   # Enable LiveDashboard in development
